@@ -1,8 +1,8 @@
-package dev_java.ch02;
+package dev_java.ch03;
 
 import java.util.Scanner;
 
-//숫자야구게임 만들기
+//숫자야구게임 만들기-내가 만든 코드
 public class NansuMaker {
   Scanner scanner = new Scanner(System.in);
   // 만약 여기서 채번한 값을 다른 클래스에서 재사용해야한다면
