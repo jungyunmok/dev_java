@@ -1,0 +1,32 @@
+package dev_java.week3;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class JButtonMain {
+  // 선언부
+  JFrame jf = new JFrame();
+  JButton jbtn_south = new JButton("전송");
+
+  // // 생성자-UI로 이동
+  // public JButtonMain() {
+  // initDisplay();
+  // }
+
+  // // 화면처리부-UI로 이동
+  // public void initDisplay() {
+  // // 이벤트 소스와 이벤트 핸들러 매핑시 this를 쓸 수 있는 건
+  // // 오직 내 안에 actionPerformed가 구현되어 있을때 뿐이다.
+  // jbtn_south.addActionListener(this);
+  // // 윈도우 x버튼 클릭시 자원반납(어플 정상 종료)
+  // jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  // jf.add("South", jbtn_south);
+  // jf.setSize(300, 250);
+  // jf.setVisible(true);
+  // }
+
+  // 메인메소드
+  public static void main(String[] args) {
+    new JButtonMain();
+  }
+}
