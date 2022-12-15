@@ -43,7 +43,7 @@ public class StudentScore_2 implements ActionListener {
     initDisplay();
   }
 
-  // 화면그리기
+  // 화면처리부
   public void initDisplay() {
     // 패널에 버튼, 텍스트추가
     jp_north.add(jlb_north);

@@ -23,6 +23,7 @@ public class StudentScoreLogic_2 {
 
   // 총점, 평균, 석차 구하기
   public void calcTable() {
+    // 총점 구하기
     int total[] = new int[sScore.dtm.getRowCount()];
     for (int i = 0; i < total.length; i++) {
       for (int j = 1; j <= 3; j++) {
@@ -32,12 +33,14 @@ public class StudentScoreLogic_2 {
       sScore.jtb.setValueAt(total[i], i, 4);
     }
 
+    // 평균 구하기
     double avg[] = new double[sScore.dtm.getRowCount()];
     for (int i = 0; i < avg.length; i++) {
       avg[i] = (total[i] / 3.0);
       sScore.jtb.setValueAt(String.format("%.2f", avg[i]), i, 5);
     }
 
+    // 석차 구하기
     int rank[] = new int[sScore.dtm.getRowCount()];
     for (int i = 0; i < rank.length; i++) {
       rank[i] = 1;
@@ -53,9 +56,9 @@ public class StudentScoreLogic_2 {
   // 샘플 3명 출력
   public void sampleTable() {
     String members[][] = {
-        { "홍길동", "80", "75", "85", "240", "80.0", "2" },
-        { "이성계", "90", "85", "80", "255", "85.0", "1" },
-        { "강감찬", "70", "75", "70", "215", "71.67", "3" }
+        { "홍길동", "80", "75", "85", "240" },
+        { "이성계", "90", "85", "80", "255" },
+        { "강감찬", "70", "75", "70", "215" }
     };
     sScore.dtm.setDataVector(members, sScore.header);
   }
