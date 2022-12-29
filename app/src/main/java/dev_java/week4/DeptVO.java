@@ -9,4 +9,10 @@ public class DeptVO {
   int deptNo;
   String deptName;
   String deptLoc;
+
+  // public DeptVO(int deptNo, String deptName, String deptLoc) {
+  // this.deptNo = deptNo;
+  // this.deptName = deptName;
+  // this.deptLoc = deptLoc;
+  // }
 }
