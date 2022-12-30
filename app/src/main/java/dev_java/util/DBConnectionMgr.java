@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Vector;
 import java.sql.ResultSet;
 
 public class DBConnectionMgr {
@@ -121,9 +123,15 @@ public class DBConnectionMgr {
 /*
  * JDBC API를 이용하여 DB연동하기
  * 1. 각 제조사가 제공하는 드라이버 클래스를 로딩한다.(ojdbc6.jar)
+ * Class.forName(드라이버 클래스 풀네임 적기);
+ * 
  * 2. 물리적으로 떨어져있는 오라클 서버와 연결 통로를 확보한다.
+ * Connection은 인터페이스이다 -> 오른쪽에 구현체 클래스가 와야한다
+ * Connection con = DriverManager.getConnection(URL, "scott", "tiger");
+ * 
  * 3. DML문을 자바에서 오라클 서버로 전달해 줄 인터페이스를 생성한다.
  * Statement: 정적쿼리문, PreparedStatement:동적쿼리문 지원
+ * 
  * 4. SELECT문의 경우 오라클 서버에서 제공하는 커서를 지원하는 ResultSet 인터페이스를 활용하여
  * 테이블에 제공되는 커서를 조작해 해당 로우에 데이터가 존재하면 Cursor..open..fetch과정을 통해
  * 오라클 서버로부터 데이터를 꺼내서 List<DeptVO>에 담을 수 있다.
@@ -131,7 +139,7 @@ public class DBConnectionMgr {
  * 리턴값은 int
  * 이것들을 요청할 떄는 executeUpdate(INSERT문 or UPDATE문 or DELETE문)
  * 
- * SELECT일떄는
+ * SELECT일때는
  * ResultSet rs = executeQuery("SELECT * FROM dept");
  * 오라클에서 제공되는 커서를 조작하는 인터페이스를 리턴타입으로 제공받아서
  * 조회 결과를 Collection에 담을 수 있다.
