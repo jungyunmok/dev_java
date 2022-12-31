@@ -9,10 +9,10 @@ public class Protocol {
 
   public static final int WAIT = 600;
   public static final int ROOM_LIST = 700;
-  public static final int ROOM_CREATE = 800;
-  public static final int ROOM_IN = 900;
-  public static final int ROOM_INLIST = 910;
-  public static final int ROOM_OUT = 920;
+  public static final int ROOM_CREATE = 710;
+  public static final int ROOM_IN = 720;
+  public static final int ROOM_INLIST = 730;
+  public static final int ROOM_OUT = 740;
   public static final String seperator = "#";
 }
 /*
